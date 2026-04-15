@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects Portfolio</title>
+    <style>
+        /* Import a sleek, modern geometric font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+        :root {
+            --bg-color: #0c0c0c;
+            --text-main: #f5f5f7;
+            --text-muted: #86868b;
+            --card-bg: #151515;
+            --accent: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 5% 6rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin: 0 0 1.5rem;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Projects Grid */
+        .projects-container {
+            padding: 2rem 5% 8rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Sleek Cards */
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 3rem 2.5rem;
+            text-align: left;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            background-color: #1a1a1a;
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .project-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            margin: 0 0 3rem;
+            font-size: 1rem;
+            font-weight: 300;
+            flex-grow: 1;
+        }
+
+        /* Modern text link instead of a bulky button */
+        .project-card .link-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: inline-flex;
+            align-items: center;
+            color: var(--text-main);
+        }
+
+        .project-card .link-text::after {
+            content: '→';
+            margin-left: 8px;
+            transition: margin-left 0.3s ease;
+        }
+
+        .project-card:hover .link-text::after {
+            margin-left: 14px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Simple Load Animations */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero { padding: 6rem 5% 4rem; }
+            .project-card { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fade-in">
+        <div class="logo">Portfolio</div>
+    </nav>
+
+    <header class="hero">
+        <h1 class="fade-in delay-1">Welcome to my portfolio.</h1>
+        <p class="fade-in delay-2">A curated collection of my digital projects, tools, and learning resources.</p>
+    </header>
+
+    <main class="projects-container fade-in delay-3">
+        
+        <a href="https://shafayrich.github.io/nineextendedhelp/" target="_blank" class="project-card">
+            <h2>Math Nine Extended Quadratics Help</h2>
+            <p>An interactive resource to assist with understanding and practicing Grade 9 extended quadratics.</p>
+            <span class="link-text">View Project</span>
+        </a>
+
+        <a href="https://shafayrich.github.io/frenchvocabulary/" target="_blank" class="project-card">
+            <h2>French Vocab</h2>
+            <p>A web-based tool designed to help users learn, practice, and memorize French vocabulary effectively.</p>
+            <span class="link-text">View Project</span>
+        </a>
+
+        </main>
+
+    <footer>
+        <p>&copy; 2026 Shafay Rich. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
